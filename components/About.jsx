@@ -9,10 +9,10 @@ const About = () => {
                 <p className='uppercase text-xl tracking-widest text-purple-600'>About</p>
                 <p className='py-2 text-gray-600'>
                 I am a third-year student at the University of Agder, pursuing a degree in information technology. 
-                Throughout my academic journey, I've had the valuable opportunity to engage in a wide range of projects, 
+                Throughout my academic journey, Ive had the valuable opportunity to engage in a wide range of projects, 
                 both within the university curriculum and on personal ventures. 
                 While my passion primarily lies in backend development, I also find frontend development to be an enjoyable challenge. 
-                As a result, I'm always open to exploring different technology stacks and embracing new experiences in the ever-evolving world of IT.
+                As a result, Im always open to exploring different technology stacks and embracing new experiences in the ever-evolving world of IT.
                 </p>
                 <p className='py-2 text-gray-600'>
                 Further down on this page you can find a list of my skills, as well as a timeline of my experience- and education, and at last, my contact information.

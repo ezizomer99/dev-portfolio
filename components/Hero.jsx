@@ -7,7 +7,7 @@ const Hero = () => {
     <div className='w-full h-screen text-center'>
         <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
             <div>
-                <h1 className='py-4 text-gray-700'>Hey, I'm <span className='text-purple-600'> Eziz</span></h1>
+                <h1 className='py-4 text-gray-700'>Hey, I am <span className='text-purple-600'> Eziz</span></h1>
                 <h1 className='py-4 text-gray-700'>A Fullstack Developer</h1>
                 <p className='py-4 text-gray-600 max-w-[70%] m-auto'>
                     I am a fullstack developer that loves to learn new things and build exciting projects. Back-end is my favorite part of development, 
