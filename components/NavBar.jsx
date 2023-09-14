@@ -1,5 +1,5 @@
 "use client"
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
 import Image from 'next/image'
 import Link from 'next/link'
@@ -9,18 +9,30 @@ import { BsLinkedin, BsGithub} from 'react-icons/bs'
 const NavBar = () => {
 
     const [nav, setNav] = useState(false)
+    const [shadow, setShadow] = useState(false)
 
     const handleNav = () => {
         setNav(!nav);
     }
 
+    useEffect(() => {
+        const handleShadow = () => {
+            if (window.scrollY >= 90) {
+                setShadow(true)
+            } else {
+                setShadow(false)
+            }
+        }
+        window.addEventListener('scroll', handleShadow);
+    }, []);
+
   return (
-    <div className='fixed w-full h-20 shadow-xl z-[100]'>
+    <div className={shadow ? "fixed w-full h-20 shadow-xl z-[100]" : "fixed w-full h-20 shadow-xl z-[100]"}>
         <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
-            <Image 
+            <Image
                 src="/assets/logo.png" 
-                alt="/" 
-                width="125" 
+                alt="/"
+                width="110" 
                 height="50" 
             />
             <div>
@@ -29,20 +41,20 @@ const NavBar = () => {
                         <li className='ml-10 text-sm uppercase hover:border-b'>Home</li>
                     </Link>
 
-                    <Link href='/'>
+                    <Link href='/#about'>
                         <li className='ml-10 text-sm uppercase hover:border-b'>About</li>
                     </Link>
 
-                    <Link href='/'>
+                    <Link href='/#skills'>
                         <li className='ml-10 text-sm uppercase hover:border-b'>Skills</li>
                     </Link>
 
-                    <Link href='/'>
-                        <li className='ml-10 text-sm uppercase hover:border-b'>Education</li>
+                    <Link href='/#experience'>
+                        <li className='ml-10 text-sm uppercase hover:border-b'>Experience</li>
                     </Link>
 
-                    <Link href='/'>
-                        <li className='ml-10 text-sm uppercase hover:border-b'>Contact Me</li>
+                    <Link href='/#education'>
+                        <li className='ml-10 text-sm uppercase hover:border-b'>Education</li>
                     </Link>
                 </ul>
 
@@ -81,11 +93,11 @@ const NavBar = () => {
                         </Link>
 
                         <Link href="/">
-                            <li className='py-4 text-sm'>Education</li>
+                            <li className='py-4 text-sm'>Experience</li>
                         </Link>
 
                         <Link href="/">
-                            <li className='py-4 text-sm'>Contact Me</li>
+                            <li className='py-4 text-sm'>Education</li>
                         </Link>
                     </ul>
 

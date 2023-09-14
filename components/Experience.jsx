@@ -21,12 +21,12 @@ const Details = ({position, company, companyLink, date, location, work}) => {
 const Experience = () => {
   return (
     <div className='w-full lg:h-screen p-2'>
-        <div className='max-w-[1240px] m-auto'>
+        <div id="experience" className='max-w-[1240px] m-auto'>
         <p className='uppercase text-xl tracking-widest text-purple-600'>Experience</p>
 
             <div className='w-[75%] mx-auto relative'>
-
-                <div className='absolute left-8 top-8 w-[4px] h-full bg-dark origin-top'/>
+            
+            <div className='absolute left-8 top-0 bottom-0 w-[2px] bg-dark' />
 
                 <ul className='w-full flex flex-col items-start justify-between ml-4'>
                     <Details 
