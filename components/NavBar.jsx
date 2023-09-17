@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { AiOutlineClose, AiOutlineMenu, AiFillMail} from 'react-icons/ai'
 import { BsLinkedin, BsGithub} from 'react-icons/bs'
+import { useRouter } from 'next/router'
 
 const NavBar = () => {
 
@@ -84,26 +85,25 @@ const NavBar = () => {
                 </div>
                 <div className='py-4 flex flex-col'>
                     <ul className='uppercase'>
+                        <Link href="/#home">
+                            <li className='py-4 text-sm'>Home</li>
+                        </Link>
 
-                        <a onClick={() => document.querySelector('#home').scrollIntoView({ behavior: 'smooth' })}>
-                            Home
-                        </a>
+                        <Link href="/#about">
+                            <li className='py-4 text-sm'>About</li>
+                        </Link>
 
-                        <a onClick={() => document.querySelector('#about').scrollIntoView({ behavior: 'smooth' })}>
-                            About
-                        </a>
+                        <Link href="/#skills">
+                            <li className='py-4 text-sm'>Skills</li>
+                        </Link>
 
-                        <a onClick={() => document.querySelector('#skills').scrollIntoView({ behavior: 'smooth' })}>
-                            Skills
-                        </a>
+                        <Link href="/#experience">
+                            <li className='py-4 text-sm'>Experience</li>
+                        </Link>
 
-                        <a onClick={() => document.querySelector('#experience').scrollIntoView({ behavior: 'smooth' })}>
-                            Experience
-                        </a>
-
-                        <a onClick={() => document.querySelector('#education').scrollIntoView({ behavior: 'smooth' })}>
-                            education
-                        </a>
+                        <Link href="/#education">
+                            <li className='py-4 text-sm'>Education</li>
+                        </Link>
                     </ul>
 
                     <div className='pt-40'>
@@ -130,6 +130,10 @@ const NavBar = () => {
                                 <BsGithub />
                             </div>
                         </a>
+                        
+                        <div>
+                        
+                        </div>
                     </div>
                 </div>
             </div>
