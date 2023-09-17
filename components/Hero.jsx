@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaLinkedinIn, FaGithub, } from 'react-icons/fa'
 import { AiOutlineMail } from 'react-icons/ai'
+import Link from 'next/link'
 
 const Hero = () => {
   return (
@@ -14,18 +15,29 @@ const Hero = () => {
                     but I also enjoy working on the front-end whether it be hobbyprogramming or working with it professionally.
                 </p>
                 <div className='flex items-center justify-between max-w-[330px] m-auto py-4'>
-                    <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-90 ease-in duration-200'>
-                        <FaLinkedinIn />
-                    </div>
-
-                    <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-90 ease-in duration-200'>
-                        <FaGithub />
-                    </div>
-
-                    <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-90 ease-in duration-200'>
-                        <AiOutlineMail />
-                    </div>
-                
+                    <a
+                        href='https://www.linkedin.com/in/ezizomer99/'
+                        target='_blank'
+                        rel='noreferrer'
+                    >
+                        <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+                            <FaLinkedinIn />
+                        </div>
+                    </a>
+                    <a
+                        href='https://github.com/ezizomer99'
+                        target='_blank'
+                        rel='noreferrer'
+                    >
+                        <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+                            <FaGithub />
+                        </div>
+                    </a>
+                    <Link href='mailto:ezizomer1999@gmail.com'>
+                        <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+                            <AiOutlineMail />
+                        </div>
+                    </Link>
                 </div>
             </div>
         </div>

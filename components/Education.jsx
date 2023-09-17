@@ -22,7 +22,7 @@ const Education = () => {
   return (
     <div className='w-full lg:h-screen p-2'>
         <div id="education" className='max-w-[1240px] m-auto'>
-        <p className='uppercase text-xl tracking-widest text-purple-600'>Education</p>
+        <p className='uppercase text-xl tracking-widest text-purple-600'>Education (under construction)</p>
 
             <div className='w-[75%] mx-auto relative'>
             

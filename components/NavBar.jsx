@@ -4,7 +4,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { AiOutlineClose, AiOutlineMenu, AiFillMail} from 'react-icons/ai'
 import { BsLinkedin, BsGithub} from 'react-icons/bs'
-import { useRouter } from 'next/router'
 
 const NavBar = () => {
 
@@ -82,53 +81,58 @@ const NavBar = () => {
                             <AiOutlineClose />
                         </div>
                     </div>
-                    <div className='border-b border-gray-300 my-4'>
-                        <p className='w-[85%] md:w-[90%] py-4'>Hey There!</p>
-                    </div>
                 </div>
                 <div className='py-4 flex flex-col'>
                     <ul className='uppercase'>
-                        <Link href="/#home">
-                            <li className='py-4 text-sm'>Home</li>
-                        </Link>
 
-                        <Link href="/#about">
-                            <li className='py-4 text-sm'>About</li>
-                        </Link>
+                        <a onClick={() => document.querySelector('#home').scrollIntoView({ behavior: 'smooth' })}>
+                            Home
+                        </a>
 
-                        <Link href="/#skills">
-                            <li className='py-4 text-sm'>Skills</li>
-                        </Link>
+                        <a onClick={() => document.querySelector('#about').scrollIntoView({ behavior: 'smooth' })}>
+                            About
+                        </a>
 
-                        <Link href="/#experience">
-                            <li className='py-4 text-sm'>Experience</li>
-                        </Link>
+                        <a onClick={() => document.querySelector('#skills').scrollIntoView({ behavior: 'smooth' })}>
+                            Skills
+                        </a>
 
-                        <Link href="/#education">
-                            <li className='py-4 text-sm'>Education</li>
-                        </Link>
+                        <a onClick={() => document.querySelector('#experience').scrollIntoView({ behavior: 'smooth' })}>
+                            Experience
+                        </a>
+
+                        <a onClick={() => document.querySelector('#education').scrollIntoView({ behavior: 'smooth' })}>
+                            education
+                        </a>
                     </ul>
 
                     <div className='pt-40'>
                         <p className='uppercase tracking-widest text-purple-950'>Connect With Me</p>
                     </div>
 
-                    <div className='flex items-center justify-between my-4 w-full sm:w-[80%] '>
-                        <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                            <BsLinkedin />
-                        </div>
+                    <div className='flex items-center justify-between my-4 w-full sm:w-[100%] '>
+                        <a
+                            href='https://www.linkedin.com/in/ezizomer99/'
+                            target='_blank'
+                            rel='noreferrer'
+                        >
+                            <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+                                <BsLinkedin />
+                            </div>
+                        </a>
 
-                        <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                            <BsGithub />
-                        </div>
-
-                        <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                            <AiFillMail />
-                        </div>
+                        <a
+                            href='https://github.com/ezizomer99'
+                            target='_blank'
+                            rel='noreferrer'
+                        >
+                            <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+                                <BsGithub />
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
-        
         </div>
     </div>
   )
