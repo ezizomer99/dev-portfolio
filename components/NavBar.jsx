@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { AiOutlineClose, AiOutlineMenu, AiFillMail} from 'react-icons/ai'
 import { BsLinkedin, BsGithub} from 'react-icons/bs'
-import { useRouter } from 'next/router'
+import {educationData} from '@/lib/educationData'
 
 const NavBar = () => {
 
@@ -12,7 +12,6 @@ const NavBar = () => {
     const [shadow, setShadow] = useState(false)
     const [navBg, setNavBg] = useState('#ecf0f3')
     const [linkColor, setLinkColor] = useState('#1f2937')
-    
 
     const handleNav = () => {
         setNav(!nav);
@@ -44,8 +43,19 @@ const NavBar = () => {
             </Link>
             
             <div>
-                <ul style={{color: `${linkColor}`}} className='hidden md:flex'>
-                    <Link href='/#home'>
+                <ul 
+                style={{ color: `${linkColor}` }} className='hidden md:flex uppercase text-sm ml-10 hover:border-b space-x-4'>
+                    {educationData.map((link) => (
+                        <li key={link.hash} className='ml-4'>
+                            <Link href={`/${link.hash}`}> 
+                                {link.name}
+                            </Link>
+                        </li>
+                    ))}
+
+{/* this section has hash routing bugs. will probably fix or delete... */}
+
+                    {/* <Link href='/#home'>
                         <li className='ml-10 text-sm uppercase hover:border-b'>Home</li>
                     </Link>
 
@@ -63,7 +73,7 @@ const NavBar = () => {
 
                     <Link href='/#education'>
                         <li className='ml-10 text-sm uppercase hover:border-b'>Education</li>
-                    </Link>
+                    </Link> */}
                 </ul>
 
                 <div onClick={handleNav} className='md:hidden'>
@@ -83,8 +93,8 @@ const NavBar = () => {
                         </div>
                     </div>
                 </div>
-                <div className='py-4 flex flex-col'>
-                    <ul className='uppercase'>
+                 <div className='py-4 flex flex-col'>
+                    {/* <ul className='uppercase'>
                         <Link href="/#home">
                             <li className='py-4 text-sm'>Home</li>
                         </Link>
@@ -104,7 +114,18 @@ const NavBar = () => {
                         <Link href="/#education">
                             <li className='py-4 text-sm'>Education</li>
                         </Link>
-                    </ul>
+                    </ul> */}
+                    
+                        <ul 
+                        style={{ color: `${linkColor}` }} className='uppercase py-4 flex flex-col'>
+                            {educationData.map((link) => (
+                                <li key={link.hash} className='my-4'>
+                                    <Link href={`/${link.hash}`}> 
+                                        {link.name}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
 
                     <div className='pt-40'>
                         <p className='uppercase tracking-widest text-purple-950'>Connect With Me</p>
