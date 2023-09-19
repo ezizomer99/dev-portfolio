@@ -1,6 +1,5 @@
-import React from 'react'
 
-export const educationData = [
+export const links = [
     {
         name: "Home",
         hash: "#home",
@@ -22,5 +21,4 @@ export const educationData = [
         hash: "#education",
     },
 ] as const;
-
 

@@ -4,13 +4,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { AiOutlineClose, AiOutlineMenu, AiFillMail} from 'react-icons/ai'
 import { BsLinkedin, BsGithub} from 'react-icons/bs'
-import {educationData} from '@/lib/educationData'
+import { links } from '../lib/data'
 
 const NavBar = () => {
 
     const [nav, setNav] = useState(false)
     const [shadow, setShadow] = useState(false)
-    const [navBg, setNavBg] = useState('#ecf0f3')
+    const [navBg, setNavBg] = useState('#d4d4d4')
     const [linkColor, setLinkColor] = useState('#1f2937')
 
     const handleNav = () => {
@@ -45,7 +45,7 @@ const NavBar = () => {
             <div>
                 <ul 
                 style={{ color: `${linkColor}` }} className='hidden md:flex uppercase text-sm ml-10 hover:border-b space-x-4'>
-                    {educationData.map((link) => (
+                    {links.map((link) => (
                         <li key={link.hash} className='ml-4'>
                             <Link href={`/${link.hash}`}> 
                                 {link.name}
@@ -118,7 +118,7 @@ const NavBar = () => {
                     
                         <ul 
                         style={{ color: `${linkColor}` }} className='uppercase py-4 flex flex-col'>
-                            {educationData.map((link) => (
+                            {links.map((link) => (
                                 <li key={link.hash} className='my-4'>
                                     <Link href={`/${link.hash}`}> 
                                         {link.name}

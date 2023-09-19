@@ -22,13 +22,13 @@ const Education = () => {
   return (
     <div className='w-full lg:h-screen p-2'>
         <div id="education" className='max-w-[1240px] m-auto'>
-        <p className='uppercase text-xl tracking-widest text-purple-600'>Education (under construction)</p>
+        <p className='uppercase text-xl tracking-widest text-purple-600 '>Education (under construction)</p>
 
             <div className='w-[75%] mx-auto relative'>
             
             <div className='absolute left-8 top-0 bottom-0 w-[2px] bg-dark' />
 
-                <ul className='w-full flex flex-col items-start justify-between ml-4'>
+                <ul className='w-full flex flex-col items-start justify-between ml-4 ' >
                     <Details 
                     study="IT" university="University of Agder"
                     date="August 2021 - Present" location="Kristiansand, Norway"

@@ -24,11 +24,11 @@ const Experience = () => {
         <div id="experience" className='max-w-[1240px] m-auto'>
         <p className='uppercase text-xl tracking-widest text-purple-600'>Experience</p>
 
-            <div className='w-[75%] mx-auto relative'>
+            <div className='w-[100%] mx-auto relative'>
             
             <div className='absolute left-8 top-0 bottom-0 w-[2px] bg-dark' />
 
-                <ul className='w-full flex flex-col items-start justify-between ml-4'>
+                <ul className='w-full flex flex-col items-start justify-between ml-4 '>
                     <Details 
                     position="Frontend Developer Intern" company="Sikri"
                     companyLink="https://www.sikri.no/"
